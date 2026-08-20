@@ -6,12 +6,13 @@
 //3 Group of object 
 //4 class and object 
 
-//class - class is a like a blueprint fot object 
+//class - class is a like a blueprint for object 
 //object  = object are real entities on the real world
 
 //Syntax 
 /*
 class className {
+access modifier...
  properties 
  string name;
  string department
@@ -121,7 +122,7 @@ int main(){
 
 //copy constructor 
 //a special constructor (default) used copy properties of one object to another object
-//shallow copy and deep copy
+//(1)shallow copy and (2)deep copy
 
 /*
 #include <iostream>
@@ -277,3 +278,61 @@ int main(){
     return 0;
 }
 */
+//multilevel- 2 parents class and one child class 
+/*
+#include <iostream>
+#include <string>
+using namespace std;
+
+class A{
+    public:
+    void showA(){
+        cout <<"SHOW A";
+    }
+};
+class B{
+    public:
+    void showB(){
+        cout <<"Show B";
+    }
+};
+class C : public A,public B{
+
+};
+int main(){
+    C c1;
+    c1.showB();
+    return 0;
+}
+*/
+
+//(3)- hierchical - 1 parent class 2 child class
+/*
+#include <iostream>
+#include <string>
+using namespace std;
+class Animal{
+    public:
+    void eat(){
+        cout <<"eating" <<endl;
+    }
+};
+class Dog : public Animal{
+    public:
+    void Bark(){
+        cout <<"Barking";
+    }
+};
+class Cat : public Animal{
+    void Meow(){
+        cout <<"Meow";
+    }
+};
+int main(){
+    Cat obj1;
+    Dog obj2;
+    obj2.eat();
+    return 0;
+}
+*/
+//Hybrid- combination of all inheritace
